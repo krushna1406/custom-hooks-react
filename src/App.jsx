@@ -7,15 +7,15 @@ function App() {
 
   if(loading) {
     return (
-      <div className='h-screen flex justify-center item-center text-white'>
-        <h2>Loading...</h2>
+      <div className='min-h-screen flex justify-center items-center'>
+        <span class="loader"></span>
       </div>
     )
   }
 
   if(error) {
     return (
-      <div className='flex justify-center item-center text-white'>
+      <div className='min-h-screen flex justify-center items-center text-white'>
        <h2>Error: {error} </h2>
       </div>
     )
