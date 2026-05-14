@@ -20,14 +20,14 @@ function App() {
       </div>
     )
   }
-  console.log(typeof data, data)
+  
   return (
-    <div className='min-h-screen bg-[#1b1b1b] text-white p-6'>
+    <div className='min-h-screen text-white p-6'>
       <h1 className='text-3xl font-medium text-center mb-6'>Products</h1>
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5'>
-        {data.map((product) => (
-          <ImageCard product={product}/>
-        ))}
+        {data.map((product) => 
+          <ImageCard key={product.id} product={product}/>
+        )}
       </div>
     </div>
   )
